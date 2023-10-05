@@ -1,0 +1,48 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #1d1e20;
+}
+
+h1{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+h1 span {
+    position: relative;
+    color: purple;
+}
+
+h1 span::before {
+    content: '';
+    right: -8px;
+    top: 50%;
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    background: purple;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+
+h1 span.stop-blinking::before {
+    animation: none;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
